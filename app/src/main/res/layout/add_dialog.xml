@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="#C3E6E6E6">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="bottom"
+        android:text="Qo'shish"
+        android:textColor="#DE000000"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:hint="Foydalanuvchi ismi"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/calc_img"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:padding="4dp"
+        android:src="@drawable/calculator"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <EditText
+        android:id="@+id/tvQiymat1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:layout_marginEnd="8dp"
+        android:hint="Qiymat"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@id/tvCalendar"
+        app:layout_constraintStart_toEndOf="@id/calc_img"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <TextView
+        android:id="@+id/tvCalendar"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="24 June 2023"
+        app:layout_constraintEnd_toEndOf="@id/tvName"
+        app:layout_constraintStart_toEndOf="@id/tvQiymat1"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <EditText
+        android:id="@+id/tvIzoh"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:layout_marginEnd="@dimen/margin_standard"
+        android:layout_marginBottom="@dimen/margin_standard"
+        android:hint="Izoh"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@id/ic_down"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/calc_img" />
+
+    <ImageView
+        android:id="@+id/ic_down"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:src="@drawable/ic_down"
+        app:layout_constraintEnd_toEndOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvCalendar" />
+
+    <TextView
+        android:id="@+id/tvCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="8dp"
+        android:text="Bekor qilish"
+        android:textAllCaps="true"
+        android:textColor="#3D9E3D"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvIzoh" />
+
+    <TextView
+        android:id="@+id/tvSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="5dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="8dp"
+        android:text="Ayirish"
+        android:textAllCaps="true"
+        android:textColor="#ff0000"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvAdd"
+        app:layout_constraintTop_toBottomOf="@id/tvIzoh" />
+
+    <TextView
+        android:id="@+id/tvAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="23dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="8dp"
+        android:text="Qo'shish"
+        android:textAllCaps="true"
+        android:textColor="#3D9E3D"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvIzoh" />
+</androidx.constraintlayout.widget.ConstraintLayout>
